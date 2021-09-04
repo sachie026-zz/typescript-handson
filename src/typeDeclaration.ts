@@ -10,5 +10,7 @@ names[1] = "test";
 // tuple
 var subjectMarks: [string, number, number] = ["Marhs", 100, 200];
 
+var marksOrResult: string | number = 20;
+
 console.log(subjectMarks);
 console.log(uname);

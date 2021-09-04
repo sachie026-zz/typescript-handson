@@ -7,5 +7,6 @@ var names = ["user1", "user2", "user3"];
 names[1] = "test";
 // tuple
 var subjectMarks = ["Marhs", 100, 200];
+var marksOrResult = 20;
 console.log(subjectMarks);
 console.log(uname);
