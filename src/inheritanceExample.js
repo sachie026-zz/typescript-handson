@@ -42,12 +42,19 @@ var Bike = /** @class */ (function (_super) {
     Bike.prototype.setType = function (type) {
         this.type = type;
     };
+    Bike.prototype.getBrand = function () {
+        return this.brand;
+    };
     Bike.prototype.getType = function () {
         return this.type;
     };
+    Bike.prototype.getDetails = function () {
+        // you will need to use super.method name in case both child and parent class has the method with same name
+        return this.getBrand() + " + " + _super.prototype.getBrand.call(this);
+    };
     return Bike;
 }(Vehicle));
-var hondaBike = new Bike('Yamaha');
+var hondaBike = new Bike("Yamaha");
 //hondaBike.setData(2, "Honda");
 console.log("honda bike", hondaBike.getBrand());
 hondaBike.setType("Two Wheeler");

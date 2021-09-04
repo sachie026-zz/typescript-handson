@@ -35,12 +35,21 @@ class Bike extends Vehicle {
     this.type = type;
   }
 
+  getBrand() {
+    return this.brand;
+  }
+
   getType() {
     return this.type;
   }
+
+  getDetails() {
+    // you will need to use super.method name in case both child and parent class has the method with same name
+    return `${this.getBrand()} + ${super.getBrand()}`;
+  }
 }
 
-let hondaBike = new Bike('Yamaha');
+let hondaBike = new Bike("Yamaha");
 //hondaBike.setData(2, "Honda");
 console.log("honda bike", hondaBike.getBrand());
 hondaBike.setType("Two Wheeler");
